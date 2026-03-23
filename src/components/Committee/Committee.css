@@ -1,0 +1,104 @@
+
+.committee {
+  background: #f5f2ed;
+  padding: 5rem 2rem;
+}
+
+.committee__container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.committee__heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #2c2c2c;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.committee__divider {
+  width: 40px;
+  height: 2px;
+  background: #2c2c2c;
+  opacity: 0.2;
+  margin-bottom: 2rem;
+}
+
+.committee__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.committee__item {
+  border-bottom: 1px solid rgba(44, 44, 44, 0.06);
+}
+
+.committee__item:last-child {
+  border-bottom: none;
+}
+
+.committee__member {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  text-decoration: none;
+  padding: 0.75rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  margin: 0 -0.5rem;
+}
+
+.committee__member:hover {
+  background: rgba(44, 44, 44, 0.04);
+}
+
+.committee__name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #2c2c2c;
+  transition: color 0.2s ease;
+}
+
+.committee__member:hover .committee__name {
+  color: #1a1a1a;
+}
+
+.committee__inst {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #aaa;
+  font-weight: 400;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.committee__member:hover .committee__inst {
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  .committee {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .committee__member {
+    padding: 0.65rem 0.4rem;
+    margin: 0 -0.4rem;
+  }
+
+  .committee__name {
+    font-size: 0.9rem;
+  }
+
+  .committee__inst {
+    font-size: 0.75rem;
+  }
+}
