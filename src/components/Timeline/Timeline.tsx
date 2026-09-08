@@ -72,17 +72,7 @@ export default function Timeline() {
                     <span className="timeline__speaker">{t('Discussion', 'Discussion')}</span>
                   </div>
                 </div>
-                <a
-                  href="https://forms.gle/TVi6UgSKcuxyJcPf6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="timeline__cta"
-                >
-                  {t("S'inscrire à cet événement", 'Register for this event')}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
-                    <path d="M7 17l9.2-9.2M17 17V7.8H7.8" />
-                  </svg>
-                </a>
+
               </div>
             </div>
           </div>
