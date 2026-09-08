@@ -83,6 +83,14 @@ export default function ConferenceProgram() {
     <div className="conference-program">
       <p className="conference-program__notice">{t('Le colloque se déroulera en français.', 'The conference will be held in French.')}</p>
       <p>{t('Le colloque est ouvert à tous, sans frais de participation, mais l’inscription est requise.', 'The conference is open to all without a participation fee, but registration is required.')}</p>
+      <a
+        href="https://forms.gle/1TKbhfWhsRHHQWDf6"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="timeline__cta conference-program__registration"
+      >
+        {t("S’inscrire au colloque", 'Register for the conference')}
+      </a>
       <p className="timeline__timezone">{t('Horaire de Bruxelles', 'Brussels time')}</p>
       {sessions.map((session) => (
         <section className="conference-program__session" key={session.date[0]}>
