@@ -2,6 +2,7 @@
 import React from 'react';
 import { useLang } from '../../context/LanguageContext';
 import './Timeline.css';
+import ConferenceProgram from './ConferenceProgram';
 
 export default function Timeline() {
   const { t } = useLang();
@@ -71,17 +72,7 @@ export default function Timeline() {
                     <span className="timeline__speaker">{t('Discussion', 'Discussion')}</span>
                   </div>
                 </div>
-                <a
-                  href="https://forms.gle/TVi6UgSKcuxyJcPf6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="timeline__cta"
-                >
-                  {t("S'inscrire à cet événement", 'Register for this event')}
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
-                    <path d="M7 17l9.2-9.2M17 17V7.8H7.8" />
-                  </svg>
-                </a>
+
               </div>
             </div>
           </div>
@@ -115,11 +106,14 @@ export default function Timeline() {
                 <div className="timeline__schedule">
                   <div className="timeline__slot">
                     <span className="timeline__time">16:00–16:45</span>
-                    <span className="timeline__speaker">David Bentley Hart</span>
+                    <span className="timeline__speaker">David Bentley Hart<em className="timeline__talk-title" lang="en">Exit, Pursued by Voltaire: Atheism as the Fruit of Christendom</em></span>
                   </div>
                   <div className="timeline__slot">
                     <span className="timeline__time">16:45–17:30</span>
-                    <span className="timeline__speaker">Karen Kilby</span>
+                    <div className="timeline__speaker">Karen Kilby
+                      <em className="timeline__talk-title" lang="en">Christian and atheist: thinking about the difference between us.</em>
+                      <p className="timeline__abstract" lang="en">Atheist activism has lost much of its vigour, while Christian anxiety about the salvation of non-believers has, in many quarters, died right down. What’s left to wrestle with? In this slightly calmer context it is worth thinking about the difference, or the distance, between believer and unbeliever, between Christian and atheist. Is there a chasm, a radical difference in world-view and life commitment? Or are believer and unbeliever in fact close? Perhaps such questions cannot be answered once and for all, at a general level, but I am interested to try to explore them.</p>
+                    </div>
                   </div>
                   <div className="timeline__slot timeline__slot--light">
                     <span className="timeline__time">17:30–17:40</span>
@@ -168,14 +162,7 @@ export default function Timeline() {
                 Louvain-la-Neuve, {t('Belgique', 'Belgium')}
               </p>
               <div className="timeline__details">
-                <div className="timeline__coming-soon">
-                  <p>
-                    {t(
-                      'Le programme définitif du colloque en présentiel sera publié ultérieurement. Le colloque est ouvert à tous, sans frais de participation, mais l\'inscription est requise.',
-                      'The final program for the on-site conference will be published subsequently. The conference is open to all without participation fee, but registration is required.'
-                    )}
-                  </p>
-                </div>
+                <ConferenceProgram />
               </div>
             </div>
           </div>
