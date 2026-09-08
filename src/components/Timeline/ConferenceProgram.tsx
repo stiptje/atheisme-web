@@ -103,8 +103,8 @@ export default function ConferenceProgram() {
           </div>
         </section>
       ))}
-      <section className="conference-program__presentations">
-        <h4>{t('Titres et brèves présentations des interventions', 'Talk titles and short abstracts')}</h4>
+      <details className="conference-program__presentations">
+        <summary>{t('Titres et brèves présentations des interventions', 'Talk titles and short abstracts')}</summary>
         {presentations.map(([speaker, title, abstract]) => (
           <article className="conference-program__presentation" key={speaker} lang="fr">
             <h5>{speaker}</h5>
@@ -112,7 +112,7 @@ export default function ConferenceProgram() {
             <p>{abstract}</p>
           </article>
         ))}
-      </section>
+      </details>
     </div>
   );
 }
