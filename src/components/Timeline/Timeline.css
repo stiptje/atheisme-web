@@ -340,3 +340,17 @@
   .timeline__event { gap: 0.6rem; }
   .timeline__card { padding: 1.25rem 1rem; }
 }
+
+.conference-program__presentations > summary {
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+}
+.conference-program__presentations > summary:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 6px;
+  border-radius: 2px;
+}
